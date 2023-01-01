@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\control\firstController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,11 +21,16 @@ Route::get('/', function () {
 });
 
 
-Route::any('/Ht4kdg3;ujeghb', function () {
-    return view('about1');
-})->name('about.us');
+Route::get('/about', [firstController::class, 'index'])->name('about.us');
 
-Route::get('/contactsjafggfasjhasfgeuyu', function () {
+Route::get('/myProfile', [firstController::class, 'profile'])->name('profile.us');
+
+Route::get('myDash', [firstController::class, 'dash'])->name('dashboard.us');
+
+
+
+
+Route::get(md5('/contact'), function () {
     return view('contact');
 })->name('contact.us');
 
