@@ -19,9 +19,19 @@ Route::get('/', function () {
 });
 
 
-Route::get('/about', function () {
+Route::any('/Ht4kdg3;ujeghb', function () {
     return view('about1');
-});
+})->name('about.us');
+
+Route::get('/contactsjafggfasjhasfgeuyu', function () {
+    return view('contact');
+})->name('contact.us');
+
+Route::get('/country', function () {
+    return view('country');
+})->middleware('country');
+
+
 
 
 

@@ -11,5 +11,6 @@
     <p style="color: blue;">First Number = {{ $a = 10 }}</p>
     <p>Second Number = {{ $b = 20 }}</p>
     <p>Total = {{ $c = $a + $b }}</p>
+    <a href="{{ url('/') }}">Back to home page</a>
 </body>
 </html>

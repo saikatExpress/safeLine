@@ -39,8 +39,8 @@
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <h1>This is Home Page</h1>
                 <ul class="list">
-                    <li class="list-item"><a href="{{ url('about') }}">About</a></li>
-                    <li class="list-item"><a href="">Contact</a></li>
+                    <li class="list-item"><a href="{{ route('about.us') }}">About</a></li>
+                    <li class="list-item"><a href="{{ route('contact.us') }}">Contact</a></li>
                 </ul>
             </div>
         </div>
