@@ -20,4 +20,9 @@ class firstController extends Controller
     {
         return view('myDashboard');
     }
+
+    public function community()
+    {
+        return view('community');
+    }
 }

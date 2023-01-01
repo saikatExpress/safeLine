@@ -9,5 +9,6 @@
 </head>
 <body>
     <h4>This is my Profle image</h4>
+    <a href="{{ url('/') }}">Home</a>
 </body>
 </html>

@@ -26,6 +26,7 @@ Route::get('/about', [firstController::class, 'index'])->name('about.us');
 Route::get('/myProfile', [firstController::class, 'profile'])->name('profile.us');
 
 Route::get('myDash', [firstController::class, 'dash'])->name('dashboard.us');
+Route::get('cmm', [firstController::class, 'community'])->name('community.us');
 
 
 

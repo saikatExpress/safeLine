@@ -9,5 +9,6 @@
 </head>
 <body>
     <h1>This is dashboard</h1>
+    <a href="{{ url('/') }}">Home</a>
 </body>
 </html>
