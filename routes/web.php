@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,15 @@ Route::get('/contactsjafggfasjhasfgeuyu', function () {
 Route::get('/country', function () {
     return view('country');
 })->middleware('country');
+
+Route::get('/amar', function (Request $request) {
+    $token = $request->session()->token();
+
+    dd($token);
+
+    //$token = csrf_token();
+
+});
 
 
 
