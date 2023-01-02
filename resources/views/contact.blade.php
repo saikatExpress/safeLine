@@ -20,11 +20,44 @@
            background-color: #000;
            color: #fff;
         }
+
+        .form{
+            width: 50%;
+            margin: 0 auto;
+            padding: 10px 12px 10px;
+            border: 1px solid grey;
+            background-color: #D3D3D3;
+        }
+
+        .form input{
+            width: 50%;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .form button{
+            padding: 8px;
+            margin: 5px;
+        }
     </style>
 
 </head>
 <body>
     <h3>This is Contact Page</h3>
+
+    <div class="form">
+
+        <h2>Store your student info : </h2>
+       
+        <form action="{{ route('student.store') }}" method="POST">
+            @csrf
+            <input type="text" name="name" placeholder="Type your name"> <br>
+            <input type="email" name="email" placeholder="Type your email"> <br>
+            <input type="text" name="phone" placeholder="Type your name"> <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
     <div class="mytable">
         <table>
             <tr>

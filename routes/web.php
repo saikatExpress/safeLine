@@ -26,12 +26,15 @@ Route::get('/about', [firstController::class, 'index'])->name('about.us');
 
 Route::get('/myProfile', [firstController::class, 'profile'])->name('profile.us');
 
-Route::get('myDash', [firstController::class, 'dash'])->name('dashboard.us');
-Route::get('cmm', [firstController::class, 'community'])->name('community.us');
+Route::get('/myDash', [firstController::class, 'dash'])->name('dashboard.us');
+Route::get('/cmm', [firstController::class, 'community'])->name('community.us');
 
 //__invoke method
 Route::get('/server', invokeController::class)->name('invoke.us');
 
+Route::post('student', [firstController::class, 'studenStore'])->name('student.store');
+
+Route::post('/student/about', [firstController::class, 'studentAbout'])->name('student.about');
 
 Route::get('/country', [firstController::class, 'country'])->name('country')->middleware('country');
 

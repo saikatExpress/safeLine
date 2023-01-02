@@ -30,4 +30,15 @@ class firstController extends Controller
     {
         return view('country');
     }
+
+    public function studenStore(Request $request)
+    {
+        $name = $request->name;
+        return $name;
+    }
+
+    public function studentAbout(Request $request)
+    {
+        dd($request->all());
+    }
 }
