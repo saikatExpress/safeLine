@@ -20,7 +20,8 @@ class countryMiddleware
             'Bangladesh',
             'America',
             'Sweden',
-            'India',
+            'india',
+            'brazil'
         ];
 
         if (in_array($request->country, $array)) {

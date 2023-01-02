@@ -44,6 +44,7 @@
                     <li class="list-item"><a href="{{ route('contact.us') }}">Contact</a></li>
                     <li class="list-item"><a href="{{ route('profile.us') }}">Profile</a></li>
                     <li class="list-item"><a href="{{ route('community.us') }}">Community</a></li>
+                    <li class="list-item"><a href="{{ route('invoke.us') }}">Invoke Method</a></li>
                 </ul>
             </div>
         </div>

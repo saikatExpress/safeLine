@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\control\firstController;
+use App\Http\Controllers\invokeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,16 +29,19 @@ Route::get('/myProfile', [firstController::class, 'profile'])->name('profile.us'
 Route::get('myDash', [firstController::class, 'dash'])->name('dashboard.us');
 Route::get('cmm', [firstController::class, 'community'])->name('community.us');
 
+//__invoke method
+Route::get('/server', invokeController::class)->name('invoke.us');
 
 
+Route::get('/country', [firstController::class, 'country'])->name('country')->middleware('country');
 
 Route::get(md5('/contact'), function () {
     return view('contact');
 })->name('contact.us');
 
-Route::get('/country', function () {
+/**Route::get('/country', function () {
     return view('country');
-})->middleware('country');
+})->middleware('country');**/
 
 Route::get('/amar', function (Request $request) {
     $token = $request->session()->token();

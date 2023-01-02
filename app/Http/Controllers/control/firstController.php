@@ -25,4 +25,9 @@ class firstController extends Controller
     {
         return view('community');
     }
+
+    public function country()
+    {
+        return view('country');
+    }
 }
