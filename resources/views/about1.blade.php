@@ -39,7 +39,7 @@
         </form>
     </div>
 
-
+ <a href="{{ route('go.us') }}">Go to Page</a>
     <p style="color: blue;">First Number = {{ $a = 10 }}</p>
     <p>Second Number = {{ $b = 20 }}</p>
     <p>Total = {{ $c = $a + $b }}</p>

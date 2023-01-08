@@ -53,7 +53,7 @@
             @csrf
             <input type="text" name="name" placeholder="Type your name"> <br>
             <input type="email" name="email" placeholder="Type your email"> <br>
-            <input type="text" name="phone" placeholder="Type your name"> <br>
+            <input type="text" name="phone" placeholder="Type your phone number"> <br>
             <button type="submit">Submit</button>
         </form>
     </div>

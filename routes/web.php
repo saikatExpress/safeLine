@@ -38,6 +38,8 @@ Route::post('/student/about', [firstController::class, 'studentAbout'])->name('s
 
 Route::get('/country', [firstController::class, 'country'])->name('country')->middleware('country');
 
+Route::get('/going', [firstController::class, 'saikat'])->name('go.us');
+
 Route::get(md5('/contact'), function () {
     return view('contact');
 })->name('contact.us');

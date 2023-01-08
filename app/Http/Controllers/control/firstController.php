@@ -33,12 +33,21 @@ class firstController extends Controller
 
     public function studenStore(Request $request)
     {
-        $name = $request->name;
-        return $name;
+        $data = array();
+        $data['name'] = $request->name;
+        $data['email'] = $request->email;
+        $data['phone'] = $request->phone;
+
+        return redirect('/');
     }
 
     public function studentAbout(Request $request)
     {
         dd($request->all());
+    }
+
+    public function saikat()
+    {
+        return view('goin');
     }
 }
