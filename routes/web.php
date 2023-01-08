@@ -4,6 +4,9 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\control\firstController;
+
+use App\Http\Controllers\control\secondController;
+
 use App\Http\Controllers\invokeController;
 
 /*
@@ -24,9 +27,11 @@ Route::get('/', function () {
 
 Route::get('/about', [firstController::class, 'index'])->name('about.us');
 
+Route::get('/test', [secondController::class, 'SecondTest']);
+
 Route::get('/myProfile', [firstController::class, 'profile'])->name('profile.us');
 
-Route::get('/myDash', [firstController::class, 'dash'])->name('dashboard.us');
+Route::get('/home', [firstController::class, 'home'])->name('home.us');
 Route::get('/cmm', [firstController::class, 'community'])->name('community.us');
 
 //__invoke method

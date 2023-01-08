@@ -4,6 +4,7 @@ namespace App\Http\Controllers\control;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\control\secondController;
 
 class firstController extends Controller
 {
@@ -16,7 +17,7 @@ class firstController extends Controller
         return view('profile');
     }
 
-    public function dash()
+    public function home()
     {
         return view('myDashboard');
     }
@@ -37,8 +38,8 @@ class firstController extends Controller
         $data['name'] = $request->name;
         $data['email'] = $request->email;
         $data['phone'] = $request->phone;
-
-        return redirect('/');
+        return redirect()->away('https://laravel.com/docs/9.x/responses');
+        //return redirect()->action([secondController::class, 'SecondTest']);
     }
 
     public function studentAbout(Request $request)
