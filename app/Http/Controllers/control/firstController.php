@@ -5,6 +5,7 @@ namespace App\Http\Controllers\control;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\control\secondController;
+use Illuminate\Support\Facades\View;
 
 class firstController extends Controller
 {
@@ -38,8 +39,7 @@ class firstController extends Controller
         $data['name'] = $request->name;
         $data['email'] = $request->email;
         $data['phone'] = $request->phone;
-        return redirect()->away('https://laravel.com/docs/9.x/responses');
-        //return redirect()->action([secondController::class, 'SecondTest']);
+        return redirect()->action([secondController::class, 'SecondTest']);
     }
 
     public function studentAbout(Request $request)
@@ -50,5 +50,10 @@ class firstController extends Controller
     public function saikat()
     {
         return view('goin');
+    }
+
+    public function lara()
+    {
+        return view('page.laravel', ['name' => 'Saikat'], ['email' => 'saikathosen444@gmail.com']);
     }
 }

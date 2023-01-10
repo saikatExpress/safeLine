@@ -48,7 +48,11 @@
     <div class="form">
 
         <h2>Store your student info : </h2>
-       
+        @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+    @endif
         <form action="{{ route('student.store') }}" method="POST">
             @csrf
             <input type="text" name="name" placeholder="Type your name"> <br>

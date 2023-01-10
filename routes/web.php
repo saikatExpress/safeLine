@@ -27,12 +27,25 @@ Route::get('/', function () {
 
 Route::get('/about', [firstController::class, 'index'])->name('about.us');
 
+
+
 Route::get('/test', [secondController::class, 'SecondTest']);
 
 Route::get('/myProfile', [firstController::class, 'profile'])->name('profile.us');
 
 Route::get('/home', [firstController::class, 'home'])->name('home.us');
 Route::get('/cmm', [firstController::class, 'community'])->name('community.us');
+
+Route::get('/laravel', [firstController::class, 'lara'])->name('laravel.us');
+
+
+Route::get('/my', function (Request $request) {
+    $request->session()->put('age', 24);
+});
+
+Route::get('/all', function (Request $request) {
+    return $request->session()->all();
+});
 
 //__invoke method
 Route::get('/server', invokeController::class)->name('invoke.us');
@@ -53,14 +66,7 @@ Route::get(md5('/contact'), function () {
     return view('country');
 })->middleware('country');**/
 
-Route::get('/amar', function (Request $request) {
-    $token = $request->session()->token();
 
-    dd($token);
-
-    //$token = csrf_token();
-
-});
 
 
 
