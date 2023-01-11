@@ -56,4 +56,13 @@ class firstController extends Controller
     {
         return view('page.laravel', ['name' => 'Saikat'], ['email' => 'saikathosen444@gmail.com']);
     }
+
+    public function profileStore(Request $request)
+    {
+        $validated = $request->validate([
+            'fullname' => 'required|max:55',
+            'email' => 'required|email',
+            'password' => 'required|min:8|max:12',
+        ]);
+    }
 }

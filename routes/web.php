@@ -52,6 +52,8 @@ Route::get('/server', invokeController::class)->name('invoke.us');
 
 Route::post('student', [firstController::class, 'studenStore'])->name('student.store');
 
+Route::post('/profile', [firstController::class, 'profileStore'])->name('store.profile');
+
 Route::post('/student/about', [firstController::class, 'studentAbout'])->name('student.about');
 
 Route::get('/country', [firstController::class, 'country'])->name('country')->middleware('country');
@@ -62,9 +64,7 @@ Route::get(md5('/contact'), function () {
     return view('contact');
 })->name('contact.us');
 
-/**Route::get('/country', function () {
-    return view('country');
-})->middleware('country');**/
+
 
 
 
